@@ -29,5 +29,31 @@
 		{
 			"protocol": "freedom"
 		}
-	]
+	],
+	"routing": {
+		"domainStrategy": "AsIs",
+		"rules": [
+			{
+				"type": "field",
+				"domain": [
+					"geosite:openai",
+					"domain:sentry.io"
+				],
+				"outboundTag": "WARP"
+			},
+			{
+				"type": "field",
+				"domain": [
+					"geosite:speedtest"
+				],
+				"outboundTag": "blocked"
+			}
+		]
+	},
+	"dns": {
+		"server": [
+			"8.8.8.8",
+			"8.8.4.4"
+		]
+	}
 }
