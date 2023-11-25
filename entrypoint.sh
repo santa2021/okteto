@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-
+UUID='7888f86c-fbb1-4641-85b5-c541688d9706'
 VLESS_WSPATH='/vless'
 sed -i "s#UUID#$UUID#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g" config.json
 sed -i "s#VLESS_WSPATH#${VLESS_WSPATH}#g" /etc/nginx/nginx.conf
